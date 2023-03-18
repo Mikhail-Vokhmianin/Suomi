@@ -8,5 +8,5 @@ setup(
       name = "suomi",
       version = "0.1.0",
       packages = find_packages(include=["suomi","suomi.*"]),
-      install_requires = ['datetime', 'random'],
+      install_requires = ['datetime', 'random','requests'],
       )
