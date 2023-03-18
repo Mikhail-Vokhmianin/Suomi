@@ -3,4 +3,4 @@ import requests
 
 greets('World')
 
-data = requests.get(API)
+textdata = requests.get(API)
