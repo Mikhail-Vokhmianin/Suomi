@@ -1,3 +1,6 @@
 from suomi import greets
+import requests
 
-greets()
+greets('World')
+
+data = requests.get(API)
