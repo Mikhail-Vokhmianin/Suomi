@@ -9,6 +9,7 @@ pip install -e .
 ## Usage
 
 from suomi import greets
+
 import requests
 
 greets('World')
