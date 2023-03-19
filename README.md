@@ -5,3 +5,10 @@ A repository made for spending time coding and commiting! **Yay**!
 
 ## Setup
 pip install -e .
+
+## Usage
+
+from suomi import greets
+import requests
+
+greets('World')
