@@ -8,8 +8,21 @@ A test package made for spending time coding and commiting! **Yay**!
 
 ## Usage
 
+Usage of the greets function:
+```
 from suomi import greets
 
+greets('stranger')
+#greets()
+
+```
+
+Usage of the API requests:
+```
 import requests
 
-greets('World')
+r = requests.post("https://api.sentino.org/api/score/text",
+                  headers={'Authorization': 'Token 0df3b4f908b73cd3db94914e1df768f79f9331e0'},
+                  json={"text": "YOUR TEXT HERE", "inventories": ["big5", "neo"]},
+                  )
+```
