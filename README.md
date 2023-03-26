@@ -1,10 +1,17 @@
 # Suomi package
 A test package made for spending time coding and commiting! **Yay**!
 
-*18.03.2023*: only one function is included: try **greet()** after installing the package
+*18.03.2023*: only one function is included: try **greets()** after installing the package
 
 ## Setup
 ```pip install -e .```
+
+## Tests
+Run ``` pytest``` to validate package performance.
+
+You can also check this for different python version (specified in the **tox.ini**)
+using the  **tox** package and running the same ```tox``` command (note that the
+corresponding python versions should be installed on your machine).
 
 ## Usage
 
