@@ -1,11 +1,12 @@
-""" Misha's package for the first task
+""" Misha's package for practice
 
 function list:
-    greets()
-    
+    greets
+    text_analysis
 
 """
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 from .task1 import greets
+from .datascience.task2 import text_analysis
