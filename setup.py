@@ -9,4 +9,11 @@ setup(
     version="0.1.0",
     packages=find_packages(include=["suomi", "suomi.*"]),
     install_requires=['requests'],
+    classifiers=[
+        'Development Status :: 0 - Pre-Alpha',
+        'Intended Audience :: Developers',
+        'License :: Free',
+        'Natural Language :: English',
+        'Programming language :: Python :: 3.10'
+    ]
 )
