@@ -40,12 +40,3 @@ def text_analysis(your_text, test_name='big5'):
                              })
 
     return surprise
-
-
-result = text_analysis('I am sad now. I am lost.')
-print(result)
-
-# result = result.set_index('labels')
-# plt.bar(result['labels'], result['quantiles'], width=0.7,
-#        color={'r', 'purple', 'g', 'b', 'orange'})
-# plt.show()
