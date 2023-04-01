@@ -2,6 +2,7 @@
 A test package made for spending time coding and commiting! **Yay**!
 
 *18.03.2023*: only one function is included: try **greets()** after installing the package
+
 *01.04.2023*: another function is added: try **text_analysis**
 
 ## Setup
@@ -16,7 +17,7 @@ corresponding python versions should be installed on your machine).
 
 ## Usage
 
-Usage of the greets function:
+### Usage of the greets function:
 ```
 from suomi import greets
 
@@ -25,12 +26,21 @@ greets('stranger')
 
 ```
 
-Usage of the API requests:
+### Usage of the API requests:
 ```
 import requests
 
 r = requests.post("https://api.sentino.org/api/score/text",
-                  headers={'Authorization': 'Token 0df3b4f908b73cd3db94914e1df768f79f9331e0'},
-                  json={"text": "YOUR TEXT HERE", "inventories": ["big5", "neo"]},
+                  headers={'Authorization': 'YOUR TOKEN'},
+                  json={"text": "YOUR TEXT", "inventories": ["big5", "neo"]},
                   )
+```
+
+### Usage of the text_analysis
+Results are obtained for the [big5 personalty test](https://en.wikipedia.org/wiki/Big_Five_personality_traits) on defalut,
+this example show usage for the [NEO personality test](https://en.wikipedia.org/wiki/Revised_NEO_Personality_Inventory):
+```
+from suomi import text_analysis
+
+result = text_analysis('I like to be tested','neo')
 ```
