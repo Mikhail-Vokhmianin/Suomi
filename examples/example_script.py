@@ -1,12 +1,30 @@
-from suomi import greets
-import requests
-import json
+from suomi import text_analysis
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 
-greets('Owner')
+kotkin = pd.read_csv("C:/Users/vohmy/PycharmProjects/Suomi-package/examples/kotkin_comments.csv", index_col=0)
+stone = pd.read_csv("C:/Users/vohmy/PycharmProjects/Suomi-package/examples/stone_comments.csv", index_col=0)
+kotkin.rename({'0': 'Comments'}, axis=1, inplace=True)
+stone.rename({'0': 'Comments'}, axis=1, inplace=True)
 
-r = requests.post("https://api.sentino.org/api/score/text",
-                  headers={'Authorization': 'Token 0df3b4f908b73cd3db94914e1df768f79f9331e0'},
-                  json={"text": "I do not know who I am", "inventories": ["big5", "neo"]},
-                  )
-data = json.loads(r.text)
-print(data)
+df = pd.concat([kotkin['Comments'], stone['Comments']], keys=['kotkin', 'stone'])
+df = pd.DataFrame(df)
+df['origin'] = df.index.get_level_values(0)
+
+total_comments = len(df)
+result = text_analysis(df['Comments'][0])
+result['origin'] = df['origin'][0]
+s = 4
+i = 0
+for c in df['Comments']:
+    i += 1
+    if type(c) == str and len(c) > 0:
+        r = text_analysis(c)
+        r['origin'] = df['origin'][i]
+        result = pd.concat([result, r], ignore_index=True)
+        print('comment #' + str(i) + ' out of ' + str(total_comments))
+
+# histogram:
+sns.displot(result, x="quantiles", col="labels", hue="origin", kind="kde", fill=True)
+plt.show()
