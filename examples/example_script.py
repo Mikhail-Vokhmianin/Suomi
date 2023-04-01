@@ -3,8 +3,8 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-kotkin = pd.read_csv("C:/Users/vohmy/PycharmProjects/Suomi-package/examples/kotkin_comments.csv", index_col=0)
-stone = pd.read_csv("C:/Users/vohmy/PycharmProjects/Suomi-package/examples/stone_comments.csv", index_col=0)
+kotkin = pd.read_csv("kotkin_comments.csv", index_col=0)
+stone = pd.read_csv("stone_comments.csv", index_col=0)
 kotkin.rename({'0': 'Comments'}, axis=1, inplace=True)
 stone.rename({'0': 'Comments'}, axis=1, inplace=True)
 
