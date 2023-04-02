@@ -3,7 +3,7 @@ A test package made for spending time coding and commiting! **Yay**!
 
 *18.03.2023*: only one function is included: try **greets()** after installing the package
 
-*01.04.2023*: another function is added: try **text_analysis**
+*01.04.2023*: another function is added: try **sentino_test_results**
 
 ## Setup
 ```pip install -e .```
@@ -42,5 +42,5 @@ this example show usage for the [NEO personality test](https://en.wikipedia.org/
 ```
 from suomi import text_analysis
 
-result = text_analysis('I like to be tested','neo')
+result = sentino_test_results('I like to be tested','neo')
 ```

@@ -7,7 +7,7 @@ import json
 import pandas as pd
 
 
-def text_analysis(your_text, test_name='big5'):
+def sentino_test_results(your_text, test_name='big5'):
     """ Analyze your text using API request from Sentino
 
     Parameters

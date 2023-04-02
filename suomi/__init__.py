@@ -9,4 +9,4 @@ function list:
 __version__ = '0.1.1'
 
 from .task1 import greets
-from .datascience.task2 import text_analysis
+from .datascience.task2 import sentino_test_results
