@@ -1,3 +1,5 @@
+""" Test functions related to the Sentino API usage"""
+
 import pytest
 from suomi import sentino_test_results
 

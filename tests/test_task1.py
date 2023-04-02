@@ -1,5 +1,6 @@
 """ Test greets function """
-
+import io
+import sys
 from suomi import greets
 
 
@@ -9,8 +10,6 @@ class TestGreets(object):
     # @pytest.mark.skipif(sys.version_info > (2, 7), reason="requires Python 2.7")
     def test_greets(self):
         expected_output = 'Vasya!'
-        import io
-        import sys
         captured_output = io.StringIO()
         sys.stdout = captured_output
 
