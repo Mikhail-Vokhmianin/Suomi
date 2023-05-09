@@ -1,6 +1,6 @@
 language: python
 python:
-  - "3.6"
+  - "3.10"
 install:
   - pip install -e .
   - pip install pytest-cov codecov  # Install packages for code coverage report
