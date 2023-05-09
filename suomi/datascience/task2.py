@@ -42,3 +42,11 @@ def sentino_test_results(your_text, test_name='big5'):
                                  })
 
     return surprise
+
+
+class TextData:
+    """A class created for text analysis within the suomi package"""
+
+    def __init__(self, text, genre):
+        self.text = text
+        self.genre = genre
